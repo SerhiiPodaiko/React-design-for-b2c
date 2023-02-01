@@ -1,0 +1,74 @@
+@import "src/styles/variables";
+
+.cta {
+  padding: 88px 0 115px;
+  background: $lightBlueColor;
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    color: $whiteColor;
+    text-align: left;
+    max-width: 450px;
+
+    @media (max-width: 768px) {
+      margin: 0 auto;
+      font-size: 32px;
+      text-align: center;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 28px;
+    }
+  }
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  button  {
+    align-self: flex-end;
+    max-width: 245px;
+
+    @media (max-width: 768px) {
+      align-self: center;
+    }
+
+    span {
+      margin-left: 10px;
+    }
+  }
+
+  &__link {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 125%;
+    color: #DFE0EB;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}

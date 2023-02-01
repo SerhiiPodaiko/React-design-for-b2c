@@ -1,0 +1,36 @@
+@import "src/styles/variables";
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .3s ease;
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
+
+  &:hover {
+    transform: translateY(3px);
+  }
+
+  &.btn-blue {
+    color: $whiteColor;
+    background: $lightBlueColor;
+  }
+
+  &.btn-light {
+    padding-left: 25px;
+    padding-right: 25px;
+    color: $defaultColor;
+    background: $whiteColor;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  }
+}

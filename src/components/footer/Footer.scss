@@ -1,0 +1,54 @@
+@import "src/styles/variables";
+
+.footer {
+  padding: 40px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    @media (max-width: 576px) {
+      gap: 5px;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 27px;
+    color: $defaultColor;
+    transition: .3s ease;
+
+    &:hover {
+      color: $lightBlueColor  ;
+      transform: translateX(-5px);
+    }
+  }
+
+  hr {
+    margin: 20px 0;
+    background: rgba(135, 146, 161, 0.08);
+    outline: none;
+    border: none;
+    height: 1px;
+  }
+
+  &__copy {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: rgba(69, 88, 128, 0.5);
+
+    @media (max-width: 576px) {
+      text-align: center;
+    }
+  }
+}

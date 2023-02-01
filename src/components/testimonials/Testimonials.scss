@@ -1,0 +1,100 @@
+@import "src/styles/variables";
+
+.testimonials {
+  padding: 232px 0 150px;
+
+  @media (max-width: 1200px) {
+    padding: 150px 0 100px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 90px 0;
+  }
+
+  @media (max-width: 568px) {
+    padding: 40px 0;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__users {
+    display: flex;
+    gap: 30px;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    &-item {
+      text-align: center;
+      padding: 38px 44px 32px;
+      border: 1px solid rgba(69, 88, 128, 0.2);
+      border-radius: 4px;
+      flex: 1;
+      transition: .3s ease;
+
+      &:hover {
+        transform: scale(0.97);
+        background: $whiteColor;
+        background: $darkBlueColor;
+
+        & > p, h5 {
+          color: $whiteColor;
+        }
+
+        @media (max-width: 568px) {
+          transform: translateX(0) scale(0.97);
+        }
+
+      }
+
+      @media (max-width: 1200px) {
+        padding: 20px;
+      }
+
+      .testimonials__text {
+        text-align: left;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 180%;
+        color: $defaultColor;
+        margin-bottom: 40px;
+
+        @media (max-width: 992px) {
+          text-align: center;
+        }
+
+        @media (max-width: 568px) {
+          font-size: 15px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .testimonials__name {
+        margin-top: 23px;
+        font-family: 'Halyard Display', sans-serif;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 125%;
+        color: $darkBlueColor;
+
+        @media (max-width: 568px) {
+          margin-top: 10px;
+        }
+      }
+
+      .testimonials__link {
+        font-size: 18px;
+        line-height: 180%;
+        color: $defaultColor;
+      }
+    }
+  }
+}

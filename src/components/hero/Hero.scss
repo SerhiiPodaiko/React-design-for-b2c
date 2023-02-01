@@ -1,0 +1,75 @@
+@import "src/styles/variables";
+
+.hero {
+  background: linear-gradient(180deg, rgba(242, 249, 255, 0.12) 0%, #F2F9FF 100%);
+  position: relative;
+  padding: 144px 0 480px;
+
+  @media (max-width: 768px) {
+    padding: 100px 0 350px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 100px 0 250px;
+  }
+
+  &__title {
+    font-family: 'Halyard Display', sans-serif;
+    font-weight: 500;
+    font-size: 56px;
+    color: $darkBlueColor;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 28px;
+    }
+  }
+
+  &__subtitle {
+    margin: 27px 0 29px;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+
+    @media (max-width: 576px) {
+      font-size: 16px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    gap: 23px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .hero__image {
+    position: absolute;
+    bottom: -160px;
+    max-width: 977px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      bottom: -220px;
+    }
+
+    @media (max-width: 576px) {
+      padding: 0 15px;
+    }
+
+    @media (max-width: 476px) {
+      bottom: -240px;
+    }
+  }
+}

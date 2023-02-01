@@ -1,0 +1,65 @@
+@import "variables";
+
+@font-face {
+  font-family: 'Halyard Display';
+  src: url('../assets/fonts/Halyard_Display_Medium.ttf') format('ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Halyard Text';
+  src: url('../assets/fonts/Halyard_Text_Regular.ttf') format('ttf');
+  font-weight: 400;
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Halyard Text', sans-serif;
+  color: $defaultColor;
+  font-size: 18px;
+}
+
+body.locked {
+    overflow: hidden;
+}
+
+.container {
+  max-width: 1210px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'Halyard Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
+  color: $darkBlueColor;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    line-height: 50px;
+  }
+
+  @media (max-width: 564px) {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}

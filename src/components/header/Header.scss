@@ -1,0 +1,199 @@
+@import "src/styles/variables";
+
+.header {
+  background: $whiteColor;
+  position: relative;
+
+  @media (max-width: 992px) {
+    padding: 24px 0;
+  }
+
+  .container__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: 992px) and (max-width: 1300px) {
+      justify-content: space-around;
+    }
+  }
+
+  .logo {
+    @media (max-width: 768px) {
+      z-index: 10;
+    }
+
+    @media (max-width: 576px) {
+      padding-left: 25px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 992px) {
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+    }
+
+    nav {
+      margin-left: 85px;
+      transition: .3s ease;
+
+      @media (max-width: 992px) {
+        margin-left: 0;
+      }
+
+      @media (max-width: 768px) {
+        position: absolute;
+        transform: translateX(1000px) scale(0);
+        overflow: hidden;
+        right: 0;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        z-index: 5;
+        width: 100%;
+
+        &.active {
+          transform: translateX(0) scale(1);
+          overflow: visible;
+        }
+      }
+
+      .menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 50px;
+        background: $whiteColor;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+        }
+
+        @media (min-width: 992px) and (max-width: 1300px) {
+          gap: 30px;
+        }
+
+        &__item {
+
+          &-link {
+            display: inline-block;
+            font-weight: 400;
+            font-size: 16px;
+            color: $darkBlueColor;
+            cursor: pointer;
+            transition: .3s ease;
+            position: relative;
+
+            &::before {
+              position: absolute;
+              content: '';
+              bottom: -2px;
+              right: 0;
+              width: 0;
+              height: 1.5px;
+              background: #1E266D;
+              transition: .3s ease;
+            }
+            &::after {
+              position: absolute;
+              content: '';
+              bottom: -2px;
+              right: 0;
+              width: 0;
+              height: 1.5px;
+              background: #1E266D;
+              transition: .3s ease;
+            }
+
+            &:hover::before {
+              width: 100%;
+              left: 0;
+            }
+
+            &:hover::after {
+              width: 100%;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .contact {
+      display: flex;
+      align-items: center;
+
+      &__number {
+        margin-right: 34px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 80px;
+        color: $darkBlueColor;
+      }
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    .burger {
+      width: 26px;
+      height: 18px;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      border: none;
+      outline: none;
+      background: transparent;
+      transition: .3s ease;
+      cursor: pointer;
+      position: absolute;
+      right: 25px;
+      z-index: 10;
+
+
+      @media (max-width: 768px) {
+        display: flex;
+      }
+
+      .line {
+        background: $darkBlueColor;
+        height: 2px;
+        width: 100%;
+        transition: .2s ease;
+        position: relative;
+      }
+
+      &.active {
+        .line:nth-child(2) {
+          display: none;
+        }
+        .line:nth-child(1) {
+          transform: rotate(45deg);
+          top: 7.5px;
+
+        }
+        .line:nth-child(3) {
+          transform: rotate(-45deg);
+          bottom: 7.5px;
+        }
+      }
+    }
+  }
+}
